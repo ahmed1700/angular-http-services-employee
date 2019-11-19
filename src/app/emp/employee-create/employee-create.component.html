@@ -1,0 +1,25 @@
+<div class="container">
+    <h3 class="mb-3 text-center">Create Employee</h3>
+    <div class="col-md-12">
+        <div class="fom-group">
+            <input type="text"
+             [(ngModel)]="emp.name"
+            class="form-control" placeholder="Name">
+        </div>
+        <div class="fom-group">
+            <input type="text"
+            [(ngModel)]="emp.email"
+            class="form-control" placeholder="Email">
+        </div>
+        <div class="fom-group">
+            <input type="text" 
+            [(ngModel)]="emp.phone"
+            class="form-control" placeholder="Phone">
+        </div>
+        <div class="fom-group">
+               <button
+                (click) ="addEmployee()"
+               class="btn btn-success btn-lg btn-block">Create</button>
+            </div>
+    </div>
+</div>

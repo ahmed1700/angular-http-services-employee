@@ -1,0 +1,42 @@
+<div *ngIf="employees.length > 0 then displayEmps else noData"> </div>
+
+
+<ng-template #displayEmps>
+  <div class="container custom-container">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.phone}}</td>
+            <td>
+                <span 
+                routerLink="/edit-emp/{{emp.id}}"
+                class="edit">
+                Edit
+              </span>
+          
+                <span
+                (click) ="deleteEmployee(emp.id)"
+                class="delete">Delete</span>
+            </td>
+          </tr>
+ 
+        </tbody>
+      </table>
+
+</div>
+</ng-template>
+<ng-template #noData>
+       No Employee Added Yet
+</ng-template>

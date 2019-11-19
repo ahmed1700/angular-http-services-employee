@@ -1,0 +1,13 @@
+.edit
+{
+    margin-right: 10px;
+}
+.edit,.delete
+{
+  cursor: pointer;
+  display: inline-block;
+  color: blue;
+}
+.custom-container{
+  padding-top: 30px;
+}
